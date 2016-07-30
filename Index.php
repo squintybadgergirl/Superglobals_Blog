@@ -1,26 +1,16 @@
 <?php
-include 'Application/Config/config.php';
+include_once 'Application/Config/config.php';
+
+//Should invoke a controller I think but I can't get it to work! '
+//$view = new IndexController('index');
+//$view->invoke();
+//print_r($view);
+//echo $view;
 
 
-function getUser($pdo,$username) {
+//Can get the Model bit to work though
+//Create a new instance of HTMLView class 
+//which displays layout.phtml with 'Yay'! passed in as a heading
+$view2 = new HtmlView('layout',['heading' => 'Yay!']);
 
-    try {
-        $user_query = $pdo->prepare("SELECT * from users WHERE username=:username;");
-        $user_query->execute(['username' => $username]);
-        $user =$user_query->fetchObject('UserModel');
-        return $user;
-    } catch (PDOException $e) {
-        die($e->getMessage());
-    }
-    
-}
-
-
-$username = 'sholmes';
-
-$user = getUser($pdo,$username);
-
-
-echo $user->getFullname();
-
-
+echo $view2;
