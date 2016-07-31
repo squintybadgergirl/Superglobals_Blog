@@ -23,7 +23,7 @@ class UserModel {
     }
     
     public static function read($pdo,$username){
-        $sql = "SELECT * FROM items users WHERE username=:username;";
+        $sql = "SELECT * FROM users WHERE username=:username;";
         $stmt = $pdo->prepare($sql);
         $stmt->execute(['username' => $username]);
         
