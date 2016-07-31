@@ -2,10 +2,6 @@
 
 <?php
 
-include 'Application/Models/User.php';
-include 'Application/Models/Article.php';
-include 'Application/Models/View.php';
-include 'Application/Controllers/Index.php';
 
 const DB_DSN = 'mysql:host=localhost;dbname=blog';
 const DB_USER = 'admin';
