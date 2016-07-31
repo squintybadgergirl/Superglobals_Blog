@@ -9,3 +9,4 @@ class IndexController extends Controller {
     }
     
 }
+//echo 'hello superglobals I made it at last';
