@@ -11,15 +11,7 @@ class UserModel {
     private $dateofbirth;
     private $creationdate;
     
-    function __construct($id, $username, $password, $fullname, $role, $email, $dateofbirth, $creationdate) {
-        $this->id = $id;
-        $this->username = $username;
-        $this->password = $password;
-        $this->fullname = $fullname;
-        $this->role = $role;
-        $this->email = $email;
-        $this->dateofbirth = $dateofbirth;
-        $this->creationdate = $creationdate;
+    function __construct(){
     }
     
     public static function read($pdo,$username){

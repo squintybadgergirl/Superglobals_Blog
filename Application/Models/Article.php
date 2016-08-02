@@ -11,15 +11,7 @@ class ArticleModel {
     private $modifieddate;
     private $status;
     
-    function __construct($id, $title, $body, $author, $category, $creationdate, $modifieddate, $status) {
-        $this->id = $id;
-        $this->title = $title;
-        $this->body = $body;
-        $this->author = $author;
-        $this->category = $category;
-        $this->creationdate = $creationdate;
-        $this->modifieddate = $modifieddate;
-        $this->status = $status;
+    function __construct(){
     }
     
     public static function read($pdo,$id){

@@ -1,6 +1,12 @@
 <!--Contains DB connection and constants-->
 
 <?php
+//include 'Application/Controllers/Index.php';
+//include 'Application/Controllers/User.php';
+include 'Application/Controllers/Blog.php';
+include 'Application/Models/View.php';
+include 'Application/Models/Article.php';
+include 'Application/Models/User.php';
 
 
 const DB_DSN = 'mysql:host=localhost;dbname=blog';
