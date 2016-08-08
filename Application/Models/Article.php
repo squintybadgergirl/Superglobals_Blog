@@ -12,6 +12,13 @@ class ArticleModel {
     private $status;
     
     function __construct(){
+        $sql = "SELECT * FROM items article";
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute();
+        
+        $articles = $stmt->fetchALL();
+     
+        return $articles;
     }
     
     public static function read($pdo,$id){
@@ -26,17 +33,15 @@ class ArticleModel {
     }
     
      public static function read_all($pdo){
-        $sql = "SELECT * FROM items articles";
+        $sql = "SELECT * FROM items article";
         $stmt = $pdo->prepare($sql);
         $stmt->execute();
         
         $articles = $stmt->fetchALL();
-        
-        foreach ($articles as $row) {
-            echo $row;
-        }
-        
+     
+        return $articles;
     }
+    
     
         
     

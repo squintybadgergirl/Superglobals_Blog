@@ -1,18 +1,38 @@
-<!--//Submitting an article-->
+ <h1> Write your Blog article </h1>
+        <p>Please enter your Blog article below</p>
+        
+        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+            method="post"      
+            enctype="multipart/form-data" >
 
-<?php print_r($_POST) ?>
-
-
-<form action="post.php" method="post">
-  <div>
-  <label for="title">Title: </label>
-  <input name="title" type="text"/>
-  </div>
-
-  <div>
-  <label for="body">Body: </label>
-  <input name="body" type="text"/>
-  </div>
-    
-  <button type="submit">Submit</button>
-</form>
+            <input type="hidden" 
+            accept=""name="MAX_FILE_SIZE" 
+            accesskey=""value="10000000" />
+            
+            Choose and image for the start of your article<br>
+            <input type="file" name="image_start" />
+            
+            <br>Select a Category for your article
+            
+            <select name="category">
+                <option value="Technology">Technology</option>
+                <option value="Business">Business</option>
+                <option value="Politics">Politics</option>
+                <option value="Entertainment">Entertainment</option>
+            </select>
+            
+            <br
+            
+            Add a title for your article:<br>
+            <input type="text" name="title">
+             <br>
+            Type your article here:<br>
+            <textarea name="article_text" rows="50" cols="100"></textarea>
+            
+            <br>Choose and image for the end of your article<br>
+            <input type="file" name="image_end" />
+            
+            <input type="submit" value="send" />
+            
+            <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+        </form>
